@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 class="title"><%=Title%></h1>
+<form action="<%=route%>" method="post" class="form">
+    <input type="text" name="newItem" class="input-field" placeholder="New Item">
+    <button type="submit" name ="button" class="button" value="<%=Title%>">Add</button>
+</form>
+<ul class="main-list">
+    <%for (var xz = 0; xz < newListItem.length; xz++){%>
+        <div class="item-div">
+            <input type="checkbox" class = "checkbox" autocomplete="off" name="cb">
+            <li class="list-item"><%=newListItem[xz]%></li>
+        </div>
+        
+    <%}%>
+</ul>
+</body>
+</html>
